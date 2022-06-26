@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hacking_heist_2/screens/Profile.dart';
 import 'package:hacking_heist_2/screens/homepage.dart';
 import 'package:hacking_heist_2/screens/split_bill.dart';
+import 'package:alan_voice/alan_voice.dart';
 
 class BtNavigationBar extends StatefulWidget {
   const BtNavigationBar({Key? key}) : super(key: key);
@@ -26,7 +27,12 @@ class _BtNavigationBarState extends State<BtNavigationBar> {
     ),
     Profilepage(),
   ];
-
+  _BtNavigationBarState(){
+    AlanVoice.addButton(
+        "9425b8755ef7dbadb27e9005ab11a6952e956eca572e1d8b807a3e2338fdd0dc/stage",
+        buttonAlign: AlanVoice.BUTTON_ALIGN_LEFT);
+    //AlanVoice.playText("Hi" );
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
